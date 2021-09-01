@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeiShi.AboutPage"
+             Title="关于">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Margin="0,20,0,0" HeightRequest="100" Source="WeiShiLogo.jpg" Aspect="AspectFit" HorizontalOptions="Center"/>
+            <Label Text="卫士" TextColor="Black" FontSize="18" HorizontalOptions="Center"/>
+            <Label Text="版本:V6.0.1.552" TextColor="Black" FontSize="18" HorizontalOptions="Center"/>
+            <Label Text="服务器:60.223.235.75" TextColor="Black" FontSize="18" HorizontalOptions="Center"/>
+
+            <TableView Grid.Row="1" Margin="10,30,20,0">
+                <TableRoot>
+                    <TableSection>
+                        <ViewCell >
+                            <Grid>
+                                <Label Text="检测更新" FontSize="17" TextColor="Black" VerticalOptions="Center"/>
+                                <Image Source="Right_16.png" Aspect="AspectFit" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,0,0"/>
+                            </Grid>
+                        </ViewCell>
+
+                        <ViewCell Tapped="Support_Tapped">
+                            <Grid>
+                                <Label Text="支持" FontSize="17" TextColor="Black" VerticalOptions="Center"/>
+                                <Image Source="Right_16.png" Aspect="AspectFit" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,0,0"/>
+                            </Grid>
+                        </ViewCell>
+
+                        <ViewCell Tapped="LicenseAgreement_Tapped">
+                            <Grid>
+                                <Label Text="许可协议" FontSize="17" TextColor="Black" VerticalOptions="Center"/>
+                                <Image Source="Right_16.png" Aspect="AspectFit" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,0,0"/>
+                            </Grid>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

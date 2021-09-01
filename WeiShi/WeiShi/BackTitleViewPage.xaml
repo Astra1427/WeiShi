@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeiShi.BackTitleViewPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White">
+    <Grid RowDefinitions="70,*">
+        <StackLayout>
+            <Grid Padding="10,0" HeightRequest="70"  VerticalOptions="Center"  Margin="0,25,0,0">
+                <ImageButton Source="app_images_black_back_44.png" HeightRequest="17.6" HorizontalOptions="Start" Aspect="AspectFit" VerticalOptions="Center" BackgroundColor="Transparent" Clicked="back_Clicked" Margin="10,0,0,0"/>
+                <Label Text="{Binding cPage.Title}" TextColor="Black" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <ImageButton Source="{Binding img}" BackgroundColor="Transparent" HorizontalOptions="End" Margin="0,0,10,0"/>
+            </Grid>
+            <BoxView BackgroundColor="LightGray" HeightRequest="1" Margin="-20,0"/>
+        </StackLayout>
+        <ContentView Grid.Row="1" Content="{Binding cPage.Content}" Margin="0,-6,0,0"/>
+    </Grid>
+</ContentPage>

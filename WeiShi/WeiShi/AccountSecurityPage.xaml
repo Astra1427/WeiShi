@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeiShi.AccountSecurityPage"
+             Title="账号与安全">
+    <ContentPage.Content>
+        <TableView HasUnevenRows="True" Margin="10,0">
+            <TableRoot>
+                <TableSection>
+                    <ViewCell>
+                        <Grid Padding="10,20">
+                            <Label Text="账号" FontSize="15" TextColor="Black" VerticalOptions="Center"/>
+                            <Label x:Name="lUserName" TextType="Html" Text="wangji2" HorizontalOptions="End"/>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell Tapped="ModifyPassword_Tapped">
+                        <Grid Padding="10,20">
+                            <Label Text="修改密码" FontSize="15" TextColor="Black" VerticalOptions="Center"/>
+                            <ImageButton Source="right_16.png" HorizontalOptions="End" BackgroundColor="Transparent"/>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell>
+                        <Grid Padding="10,20">
+                            <Label Text="锁屏密码" FontSize="15" TextColor="Black" VerticalOptions="Center"/>
+                            <Switch HorizontalOptions="End"/>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell Tapped="CancelActive_Tapped">
+                        <Grid Padding="10,20">
+                            <Label Text="取消激活" FontSize="15" TextColor="Black" VerticalOptions="Center"/>
+                            <ImageButton Source="right_16.png" HorizontalOptions="End" BackgroundColor="Transparent"/>
+                        </Grid>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

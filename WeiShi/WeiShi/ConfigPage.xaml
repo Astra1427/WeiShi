@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeiShi.ConfigPage"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid RowDefinitions="150,*">
+            <Image Source="app_images_conf_bg.png" Aspect="AspectFill"  BackgroundColor="#4371fd"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="End" Margin="30,0,0,-8">
+                <Image Source="app_images_conf_avatar_182.png" Aspect="AspectFit" HeightRequest="91"/>
+                <Label x:Name="lUserName" TextType="Html" Text="王继" TextColor="White" FontSize="25" VerticalTextAlignment="Center"/>
+            </StackLayout>
+            <TableView Grid.Row="1" Margin="25,30,25,0" RowHeight="60">
+
+
+                <TableRoot>
+                    <TableSection>
+                        <ViewCell Tapped="AppStore_Tapped">
+                            <Grid>
+                                <Label Text="应用商店" TextColor="Black" VerticalOptions="Center"/>
+                                <Image Source="right_32.png" WidthRequest="16" Aspect="AspectFit" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,0,0"/>
+                            </Grid>
+                        </ViewCell>
+                    </TableSection>
+
+                    <TableSection>
+                        <ViewCell Tapped="AppRecommend_Tapped">
+                            <Grid>
+                                <Label Text="应用推荐" TextColor="Black" VerticalOptions="Center"/>
+                                <Image  Source="right_32.png" WidthRequest="16" Aspect="AspectFit" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,0,0"/>
+                            </Grid>
+                        </ViewCell>
+                    </TableSection>
+
+                    <TableSection>
+                        <ViewCell Tapped="Message_Tapped">
+                            <Grid>
+                                <Label Text="消息" TextColor="Black" VerticalOptions="Center"/>
+                                <Image  Source="right_32.png" WidthRequest="16" Aspect="AspectFit" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,0,0"/>
+                            </Grid>
+                        </ViewCell>
+                    </TableSection>
+                    
+                    <TableSection>
+                        <ViewCell Tapped="PolicyMessage_Tapped">
+                            <Grid>
+                                <Label Text="策略消息" TextColor="Black" VerticalOptions="Center"/>
+                                <Image  Source="right_32.png" WidthRequest="16" Aspect="AspectFit" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,0,0"/>
+                            </Grid>
+                        </ViewCell>
+                    </TableSection>
+
+                    <TableSection>
+                        <ViewCell Tapped="AccountSecurity_Tapped">
+                            <Grid>
+                                <Label Text="账号与安全" TextColor="Black" VerticalOptions="Center"/>
+                                <Image  Source="right_32.png" WidthRequest="16" Aspect="AspectFit" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,0,0"/>
+                            </Grid>
+                        </ViewCell>
+                    </TableSection>
+
+                    <TableSection>
+                        <ViewCell Tapped="VPN_Tapped">
+                            <Grid>
+                                <Label Text="VPN" TextColor="Black" VerticalOptions="Center"/>
+                                <Image  Source="right_32.png" WidthRequest="16" Aspect="AspectFit" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,0,0"/>
+                            </Grid>
+                        </ViewCell>
+                    </TableSection>
+
+                    <TableSection>
+                        <ViewCell Tapped="Help_Tapped">
+                            <Grid>
+                                <Label Text="帮助" TextColor="Black" VerticalOptions="Center"/>
+                                <Image  Source="right_32.png" WidthRequest="16" Aspect="AspectFit" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,0,0"/>
+                            </Grid>
+                        </ViewCell>
+                    </TableSection>
+
+                    <TableSection>
+                        <ViewCell Tapped="About_Tapped">
+                            <Grid>
+                                <Label Text="关于" TextColor="Black" VerticalOptions="Center"/>
+                                <Image  Source="right_32.png" WidthRequest="16" Aspect="AspectFit" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,0,0"/>
+                            </Grid>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

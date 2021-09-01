@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeiShi.AppDetailPage"
+             Title="应用详情"
+             >
+    <ContentPage.Content>
+
+        <StackLayout Padding="20,0" BackgroundColor="White">
+            <Grid HeightRequest="80" Margin="0,25,0,0">
+                <ImageButton Source="black_back_22.png" HorizontalOptions="Start" Aspect="AspectFit" VerticalOptions="Center" BackgroundColor="Transparent" Clicked="back_Clicked"/>
+                <Label Text="应用详情" TextColor="Black" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
+            <BoxView BackgroundColor="LightGray" HeightRequest="1" Margin="-20,0"/>
+            <Grid ColumnDefinitions="70,*,70" HeightRequest="200" Margin="0,10,0,0">
+                <ImageButton Source="{Binding appModel.img_big}" HorizontalOptions="Start" VerticalOptions="Center" CornerRadius="5" BackgroundColor="Transparent" Aspect="AspectFit"/>
+                <Label Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Margin="10,0,0,0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{Binding appModel.Name}" TextColor="Black" FontSize="20"/>
+                            <Span Text="&#10;"/>
+                            <Span Text="{Binding appModel.AppDetail}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Button Text="打开" Margin="0,20,0,0" VerticalOptions="Start" HeightRequest="35"  Grid.Column="2" TextColor="#0089ff" BackgroundColor="#eff2ef" HorizontalOptions="End" Padding="0"/>
+            </Grid>
+
+            <Label Text="应用信息" TextColor="Black" FontSize="20"/>
+            <Grid ColumnDefinitions="*" Margin="0,10,0,0" HeightRequest="350">
+                <Label Grid.Row="0" Text="开发者" HorizontalOptions="Start"/>
+                <Label Grid.Row="0" Text="{Binding appModel.Developer}" HorizontalOptions="End"/>
+
+                <Label Grid.Row="1" Text="类型" HorizontalOptions="Start"/>
+                <Label Grid.Row="1" Text="{Binding appModel.AppType}" HorizontalOptions="End"/>
+
+                <Label Grid.Row="2" Text="更新日期" HorizontalOptions="Start"/>
+                <Label Grid.Row="2" Text="{Binding appModel.UpdateTime}" HorizontalOptions="End"/>
+
+                <Label Grid.Row="3" Text="版本" HorizontalOptions="Start"/>
+                <Label Grid.Row="3" Text="{Binding appModel.Version}" HorizontalOptions="End"/>
+
+                <Label Grid.Row="4" Text="大小" HorizontalOptions="Start"/>
+                <Label Grid.Row="4" Text="{Binding appModel.AppSize}" HorizontalOptions="End"/>
+
+                <Label Grid.Row="5" Text="兼容性" HorizontalOptions="Start"/>
+                <Label Grid.Row="5" Text="{Binding appModel.MinAndroidVersion}" HorizontalOptions="End"/>
+            </Grid>
+
+            <Label x:Name="lVersionLog" Text="版本更新记录" TextColor="Black" FontSize="20" Margin="0,10,0,0"/>
+            <ListView ItemsSource="{Binding appModel.UpdateLogs}" Margin="0,10,0,0" SelectionMode="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Label Text="{Binding Version}" HorizontalOptions="Start" VerticalOptions="Center"/>
+                                <Label Text="{Binding UpdateTime}" HorizontalOptions="End" VerticalOptions="Center"/>
+                            </Grid>
+                        </ViewCell>
+                        <!--<TextCell Text="{Binding Version}" Detail="{Binding UpdateTime}"/>-->
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

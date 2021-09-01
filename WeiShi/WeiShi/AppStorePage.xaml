@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeiShi.AppStorePage"
+            xmlns:local="clr-namespace:WeiShi"
+            SelectedTabColor="#0289ff"
+            UnselectedTabColor="#bfbfbf"
+            BarBackgroundColor="White"
+             Shell.BackgroundColor="White"
+             Shell.TitleColor="Black"
+            Shell.TabBarForegroundColor="Black"
+            
+             Shell.NavBarHasShadow="True" Padding="0" NavigationPage.HasBackButton="False">
+    <Shell.TitleView>
+        <Grid  HorizontalOptions="Fill" VerticalOptions="Center">
+            <Label TextColor="Black" Text="应用商店" FontSize="20" HorizontalOptions="Start" VerticalOptions="Center"  Margin="0,0,35,0"/>
+            <ImageButton Source="app_images_appstore_download_icon_58.png"  HeightRequest="21" Aspect="AspectFit" VerticalOptions="Center" BackgroundColor="Transparent" HorizontalOptions="End" Clicked="download_Clicked" Margin="0,0,35,0"/>
+            <!--<BoxView HeightRequest="1" VerticalOptions="End" BackgroundColor="LightGray"/>-->
+        </Grid>
+    </Shell.TitleView>
+    <!--<NavigationPage.TitleView>
+        <Grid>
+            <ImageButton Source="black_back_22.png" HorizontalOptions="Start" Aspect="AspectFit" VerticalOptions="Center" BackgroundColor="Transparent" Clicked="back_Clicked"/>
+            <Label Text="应用详情" TextColor="Black" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <ImageButton Source="down_load.png" BackgroundColor="Transparent" HorizontalOptions="End" Margin="0,0,10,0"/>
+        </Grid>
+    </NavigationPage.TitleView>-->
+    <!--<TabbedPage.ToolbarItems>
+        <ToolbarItem IconImageSource="download_icon_38.png" Clicked="download_Clicked"/>
+    </TabbedPage.ToolbarItems>-->
+    <local:AlloverPage Title="全部"/>
+    <local:TobeUpdatePage Title="待更新"/>
+    <local:AppTypePage Title="应用类别"/>
+    <local:LightAppPage Title="轻应用"/>
+</TabbedPage>

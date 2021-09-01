@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeiShi.AlloverPage">
+    <ContentPage.Content>
+        <Grid RowDefinitions="44,*" Padding="20,5,20,0" Margin="0" BackgroundColor="White">
+            <BoxView BackgroundColor="#eee" CornerRadius="10" />
+            <SearchBar Margin="0,5,0,0"/>
+            <ListView Grid.Row="1" x:Name="lvDatas" SeparatorVisibility="Default" RowHeight="75" SelectionMode="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid ColumnDefinitions="44,*,70">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="App_Tapped"/>
+                                </Grid.GestureRecognizers>
+                                <ImageButton Source="{Binding img}" Aspect="AspectFit" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent"/>
+                                <Label Grid.Column="1" VerticalOptions="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{Binding Name}" TextColor="Black" FontSize="Subtitle"/>
+                                            <Span Text="&#10;" TextColor="Gray"/>
+                                            <Span Text="{Binding AppDetail}" TextColor="Gray"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                <Button Text="打开"  FontSize="13" Grid.Column="2" HeightRequest="35" Background="#eee" VerticalOptions="Center" Margin="0,5" TextColor="#5798e4" CornerRadius="10" Padding="0"/>
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:MyTabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeiShi.MainPage" 
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            
+            android:TabbedPage.ToolbarPlacement="Default"
+            xmlns:local="clr-namespace:WeiShi"
+            SelectedTabColor="#0289ff"
+            UnselectedTabColor="#bfbfbf"
+            NavigationPage.HasNavigationBar="False">
+
+    <NavigationPage BarTextColor="Black" BarBackgroundColor="White" Title="工作台" NavigationPage.HasNavigationBar="False" >
+        <x:Arguments>
+            <local:WorkbenchPage Title="工作台" TabIndex="0"/>
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage BarTextColor="Black" BarBackgroundColor="White" Title="应用商店"  NavigationPage.HasNavigationBar="False">
+        <x:Arguments>
+            <local:AppStorePage Title="应用商店" TabIndex="1"/>
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage BarTextColor="Black" BarBackgroundColor="White" Title="消息"  NavigationPage.HasNavigationBar="False">
+        <x:Arguments>
+            <local:MessagePage Title="消息" TabIndex="2"/>
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage BarTextColor="Black" BarBackgroundColor="White" Title="设置"  NavigationPage.HasNavigationBar="False">
+        <x:Arguments>
+            <local:ConfigPage Title="设置" TabIndex="3"/>
+        </x:Arguments>
+    </NavigationPage>
+</local:MyTabbedPage>

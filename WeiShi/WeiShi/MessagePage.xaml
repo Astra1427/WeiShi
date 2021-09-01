@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeiShi.MessagePage"
+             Shell.BackgroundColor="White"
+             Shell.TitleColor="Black"
+             Title="消息"
+             Shell.NavBarHasShadow="False">
+    <Shell.TitleView>
+        <Grid VerticalOptions="Center" Margin="0,0,0,0">
+            <Label Text="消息" FontSize="20" VerticalOptions="Center" TextColor="Black"/>
+        </Grid>
+    </Shell.TitleView>
+    <Grid>
+        <BoxView BackgroundColor="LightGray" HeightRequest="1" VerticalOptions="Start"/>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+            <Image Source="no_msg_73.png" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Start" Aspect="AspectFit"/>
+            <Label Text="暂无消息"
+                VerticalOptions="Start" 
+                HorizontalOptions="Center" />
+        </StackLayout>
+        
+    </Grid>
+
+</ContentPage>
